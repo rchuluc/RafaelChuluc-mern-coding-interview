@@ -1,0 +1,58 @@
+[
+    {
+        "code": "ABC-123",
+        "origin": "EZE",
+        "destination": "LDN",
+        "passengers": [],
+        "status": "Arrived"
+    },
+    {
+        "code": "XYZ-678",
+        "origin": "CRC",
+        "destination": "BRC",
+        "passengers": [],
+        "status": "Arrived"
+    },
+    {
+        "code": "DAS-314",
+        "origin": "TQR",
+        "destination": "CXC",
+        "passengers": [],
+        "status": "Arrived"
+    },
+    {
+        "code": "TWE-444",
+        "origin": "BCV",
+        "destination": "BRC",
+        "passengers": [],
+        "status": "Cancelled"
+    },
+    {
+        "code": "XAX-516",
+        "origin": "QQQ",
+        "destination": "BZ",
+        "passengers": [],
+        "status": "On Time"
+    },
+    {
+        "code": "FAC-131",
+        "origin": "DFD",
+        "destination": "QWE",
+        "passengers": [],
+        "status": "Landing"
+    },
+    {
+        "code": "XXY-414",
+        "origin": "CCX",
+        "destination": "GGC",
+        "passengers": [],
+        "status": "On Time"
+    },
+    {
+        "code": "ARG-123",
+        "origin": "BRA",
+        "destination": "ALE",
+        "passengers": [],
+        "status": "Delayed"
+    }
+]
