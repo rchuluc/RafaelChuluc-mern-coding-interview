@@ -8,6 +8,10 @@ export function Routes() {
   return (
     <Layout>
       <Router>
+      <Redirect
+        from="/"
+        to="flights"
+      />  
         <FlightsPage path="flights" />
       </Router>
     </Layout>

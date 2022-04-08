@@ -1,5 +1,5 @@
-import React, { FC } from "react";
-import { Box, Card, Container, Typography } from "@material-ui/core";
+import React, { useState } from "react";
+import { Box, Card, Container, Typography, InputLabel, Select, MenuItem } from "@material-ui/core";
 
 import { FlightStatuses } from "../../models/flight.model";
 
@@ -26,6 +26,9 @@ const mapFlightStatusToColor = (status: FlightStatuses) => {
 export const FlightCard: React.FC<FlightCardProps> = (
   props: FlightCardProps
 ) => {
+
+  const [status, setStatus] = useState(props.status)
+
   return (
     <Card
       style={{
@@ -40,6 +43,21 @@ export const FlightCard: React.FC<FlightCardProps> = (
         <Typography style={{ color: mapFlightStatusToColor(props.status) }}>
           Status: {props.status}
         </Typography>
+        <InputLabel id="demo-simple-select-label">Change status</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={status}
+          label="status-change"
+          onChange={(e) => { setStatus(e.target.value) }}
+        >
+        
+          <MenuItem  value={FlightStatuses.Arrived}>{FlightStatuses.Arrived}</MenuItem>
+          <MenuItem value={FlightStatuses.Cancelled}>{FlightStatuses.Cancelled}</MenuItem>
+          <MenuItem value={FlightStatuses.Delayed}>{FlightStatuses.Delayed}</MenuItem>
+          <MenuItem value={FlightStatuses.Landing}>{FlightStatuses.Landing}</MenuItem>
+          <MenuItem value={FlightStatuses["On Time"]}>{FlightStatuses["On Time"]}</MenuItem>
+        </Select>
       </Box>
 
       <Box>

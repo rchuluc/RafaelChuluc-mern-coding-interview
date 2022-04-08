@@ -20,7 +20,7 @@ const routingControllersOptions: RoutingControllersOptions = {
 const app = createExpressServer(routingControllersOptions)
 
 // Connect to In-Memory DB
-;async () => await db({ test: false })
+;(async () => await db({ test: false }))()
 
 app.listen(port, () => {
     console.log(`[Live Coding Challenge] Running at http://localhost:${port}`)
